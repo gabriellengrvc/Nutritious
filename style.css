@@ -1,0 +1,574 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: AzkiReg; 
+  src:url(assets/AzkiReg.ttf);
+}
+
+@font-face{
+  font-family: OptRom;
+  src:url(assets/OptRom.ttf);
+}
+
+@font-face{
+  font-family: AzkiBold; 
+  src:url(assets/AzkiBold.ttf);
+}
+
+.intro {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.intro-text {
+  width: 15%;
+  max-height:auto;
+}
+
+.hide {
+  background: white;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+nav{
+  width: 100%;
+  height: 145px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: transparent;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+  list-style-type: none;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap:no wrap;
+  flex-direction:row;
+  align-items: top;
+  justify-content: center;
+  margin-top:4%;
+  font-size: 15px;
+  font-family: OptRom;
+  position: fixed;
+}
+
+.topnav a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  transition: all .3s ease;
+-webkit-transition: all .3s ease;
+  z-index: 2;
+  color: black;
+}
+
+.topnav a:hover {
+  text-decoration:none;
+  font-size: 20px;
+}
+
+.topnav a.selected {
+  background-color: white;
+  color: black;
+  height: 2.6em;
+  font-family: OptRom;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.bgColor {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  margin-top: 0;
+  padding: 35px;
+  z-index: 1;
+}
+
+.video{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  margin:0;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+}
+
+#back-video {
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.header {
+  font-family: OptRom;
+  text-align: center;
+  text-decoration: none; 
+  color: black;
+  font-size: 25px;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+h2 {
+  text-align: center;
+  font-family: OptRom;
+  font-size: 18px;
+  color:black;
+}
+
+p {
+  color:black;
+  font-family: AzkiReg;
+  font-size: 15px
+}
+
+.scroll-up {
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 2rem;
+  height: 2rem;
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 120px;
+}
+
+img.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  width:500px
+  left: 0;
+  z-index: 0;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  top: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.shop {
+  width: 330px;
+}
+
+.img-hover-zoom {
+  width: 330px;
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+figcaption{
+  margin-top: 10px;
+  font-family:OptRom;
+  font-size: 14px;
+}
+
+.columndivider {
+  float: left;
+  width: 33.33%;
+  margin:0;
+  padding-top: 4%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-align: center;
+  background-color:#F1F1F1;
+  height:230px;
+}
+
+.rowdivider:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #D2D794;
+}
+
+.scroll {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.scroll div {
+  display: flex;
+  gap: 2em;
+}
+
+.scroll p {
+  font-size: 1.1em;
+  color: white;
+  font-family: AzkiReg;
+  margin-bottom: 0;
+  line-height: 50px;
+  text-transform: uppercase
+}
+
+.RightToLeft {
+  animation: RightToLeft 22s infinite linear;
+}
+
+@keyframes  RightToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.siderow{
+  background-color: white;
+}
+
+.sidecolumn1 {
+  float: left;
+  padding: 10px;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidecolumn2 {
+  float: left;
+  padding: 10px;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  height: 580px; 
+  text-align:center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.siderow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left{
+   width: 30%;
+}
+
+.right{
+   width: 70%;
+}
+
+.sidecolumnimg1{
+  height:530px; 
+}
+
+.sidecolumnimg{
+  height:250px;
+  margin:10px;
+}
+
+.ingredients{
+  border: 40px solid black;
+  height: 400px;
+  display: block;
+  margin: auto;
+}
+
+.ingredientsdiv{
+  background-color: black;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #D2D794;
+}
+
+.scroll2 {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.scroll2 div {
+  display: flex;
+  gap: 2em;
+}
+
+.scroll2 p {
+  font-size: 1.1em;
+  color: white;
+  font-family: AzkiReg;
+  margin-bottom: 0;
+  line-height: 50px;
+  text-transform: uppercase
+}
+
+.buttonshop{
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 6px 10px;
+  cursor: pointer;
+  text-align: center; 
+  font-family: AzkiReg;
+}
+
+.lastthing{
+  color:white; 
+  text-align: center; 
+  font-size: 20px; 
+  margin-bottom: 5px;
+}
+
+.actuallylastthing{
+  color:white; 
+  text-align: center; 
+  font-size: 15px;
+}
+
+.actuallyactually{
+  color:white; 
+  text-align: center; 
+  font-size: 10px;"
+}
+
+@media screen and (min-width: 600px) {
+  #back-video{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    margin:0;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+  }
+
+  .text {
+    width: 100px;
+  }
+
+  img.sticky {
+    width: 600px;
+  }
+  .rowdivider{
+    padding-top:0%;
+    top:0%;
+  }
+  
+  .spanimg {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    background: white;
+    overflow: hidden;
+  }
+
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sticky{
+    width: 100%;
+    height:50%;
+    margin-bottom: 10%;
+  }
+  .spanimg{
+    width: 55px;
+    height: auto;
+  }
+  .sidecolumn1 {
+    width: 100%;
+  }
+  .sidecolumn2 {
+    width: 100%;
+  }
+  .sidecolumnimg{
+    height:160px;
+  }
+  .container {
+    font-size: 15px;
+    height: 50px;
+    margin-top: 0%;
+  }
+  .container2 {
+    font-size: 15px;
+    height: 50px;
+  }
+  .finalrow {
+    height: 150px;
+  }
+  .columndivider {
+    width: 100%;
+    height:140px;
+  }
+  .rowdivider{
+    padding-top:7%;
+    padding-bottom:7%;
+  }
+  .column1 {
+    width: 100%;
+  }
+  .column2 {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 17.5px;
+  }
+  img.sticky, .column1 {
+    position: relative !important;
+    top: 0px;
+  }
+  .column {
+    width: 100%;
+  }
+  .row{
+    bottom: 7%;
+  }
+  nav a:not(:nth-child(2)) {display: none;}
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+  nav.responsive {position: relative;}
+  nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav a.selected {
+    font-family: OptRom;
+    background-color: transparent;
+    font-size: 17px;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  .bgColor{
+    padding: 20px;
+  }
+  .video{
+    width: 100%;
+    height: 100%;
+  }
+  #back-video{
+    width: 100vw;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+  .ingredients{
+    width: 100%;
+    height: 100%;
+  }
+  .lastthing{
+    font-size: 17px;
+  }
+  .actuallylastthing{
+    font-size: 10px;
+  }
+  .actuallyactually{
+    font-size: 7px;
+  }
+}
